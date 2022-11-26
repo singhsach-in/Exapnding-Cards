@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.container {
+      /* background-color: grey; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+}
+.images {
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   /* margin: 0 auto; */
+   text-align: center;
+   color: white;
+   cursor: pointer;
+   height: 80vh;
+   border-radius: 50px;
+   flex: 0.5;
+   margin: 10px;
+   transition: flex .7s ease-in-out;
+   position: relative;
+}
+.images h3 {
+    position: absolute;
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.images.active {
+    flex: 5;
+}
+.images.active h3 {
+    opacity: 1;
+}
+.Ocean{
+    background-image: url("Images/image1.jpg");
+}
+.Forest{
+    background-image: url("Images/image2.jpg");
+}
+.Mountain{
+    background-image: url("Images/image3.jpg");
+}
+.Lake{
+    background-image: url("Images/image4.jpg");
+}
+.Flower{
+    background-image: url("Images/image5.jpg");
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .images:nth-of-type(4),.images:nth-of-type(5) {
+        display: none;
+    }
+}
